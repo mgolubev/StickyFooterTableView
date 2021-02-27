@@ -25,10 +25,12 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+  StickyFooterTableView provide a pretty simple way to add a table view with the bottom sticky footer to your app.
+  The footer of the StickyFooterTableView is stuck to the bottom of the table view when contents view height is smaller then the table view height.
                    DESC
 
   spec.homepage     = "https://github.com/mgolubev/StickyFooterTableView"
-  spec.screenshots  = "https://github.com/mgolubev/StickyFooterTableView/blob/main/sample.gif"
+  # spec.screenshots  = "https://github.com/mgolubev/StickyFooterTableView/blob/main/sample.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -38,8 +40,8 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # spec.license      = "MIT (example)"
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
