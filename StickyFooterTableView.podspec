@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "StickyFooterTableView"
-  spec.version      = "0.0.3"
+  spec.version      = "0.1.0"
   spec.summary      = "The footer of the StickyFooterTableView is stuck to the bottom of the table view"
 
   # This description is used to generate tags and improve search results.
@@ -40,7 +40,6 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  # spec.license      = "MIT (example)"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
@@ -81,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "git@github.com:mgolubev/StickyFooterTableView.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/mgolubev/StickyFooterTableView.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -93,7 +92,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.source_files = "StickyFooterTableView/**/*.{swift}"
-  spec.exclude_files = "Classes/Exclude"
+  #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "StickyFooterTableView/**/*.h"
 

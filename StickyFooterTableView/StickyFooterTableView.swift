@@ -50,6 +50,7 @@ class StickyFooterTableView: UITableView {
 		stickView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
 		bottomConstraint = bottomAnchor.constraint(equalTo: stickView.bottomAnchor, constant: adjustedContentInset.bottom)
 		bottomConstraint?.isActive = true
+		stickView.layoutIfNeeded()
 		updateStickViewPosition(for: self)
 	}
 
