@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "StickyFooterTableView"
-  spec.version      = "0.0.1"
-  spec.summary      = "The footer of the StickyFooterTableView is stuck to the bottom of the table view when contents view height is smaller then the table view height"
+  spec.version      = "0.0.2"
+  spec.summary      = "The footer of the StickyFooterTableView is stuck to the bottom of the table view"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -95,7 +95,7 @@ Pod::Spec.new do |spec|
   spec.source_files = "StickyFooterTableView/**/*.{swift}"
   spec.exclude_files = "Classes/Exclude"
 
-  spec.public_header_files = "StickyFooterTableView/**/*.h"
+  # spec.public_header_files = "StickyFooterTableView/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
