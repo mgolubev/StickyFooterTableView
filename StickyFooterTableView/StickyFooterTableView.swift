@@ -43,7 +43,12 @@ class StickyFooterTableView: UITableView {
 			stickyFooter = footer
 			tableFooterView = nil
 		}
-		guard let stickView = stickyFooter, let superview = superview, stickView.superview != superview else { return }
+		guard let stickView = stickyFooter, let superview = superview else { return }
+		
+		guard stickView.superview != superview else {
+			updateStickViewPosition(for: self)
+			return
+		}
 		stickView.translatesAutoresizingMaskIntoConstraints = false
 		superview.insertSubview(stickView, aboveSubview: self)
 		stickView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
