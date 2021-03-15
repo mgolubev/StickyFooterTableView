@@ -56,16 +56,20 @@ class StickyFooterTableView: UITableView {
 		bottomConstraint = bottomAnchor.constraint(equalTo: stickView.bottomAnchor, constant: adjustedContentInset.bottom)
 		bottomConstraint?.isActive = true
 		stickView.layoutIfNeeded()
+		var inset = contentInset
+		inset.bottom = stickView.bounds.height
+		contentInset = inset
 		updateStickViewPosition(for: self)
 	}
 
 	private func updateStickViewPosition(for scrollView: UIScrollView) {
-		let value = scrollView.frame.height - (scrollView.contentInset.top + scrollView.contentSize.height + scrollView.contentInset.bottom + scrollView.adjustedContentInset.bottom - scrollView.contentOffset.y + (stickyFooter?.frame.height ?? 0))
-		if value < 0 {
-			bottomConstraint?.constant = value + scrollView.adjustedContentInset.bottom
+		let value = scrollView.frame.height - (scrollView.contentInset.top + scrollView.contentSize.height - scrollView.contentOffset.y + (stickyFooter?.frame.height ?? 0))
+		let inset = scrollView.adjustedContentInset.bottom - scrollView.contentInset.bottom
+		if value < inset {
+			bottomConstraint?.constant = value
 		}
 		else {
-			bottomConstraint?.constant = scrollView.adjustedContentInset.bottom
+			bottomConstraint?.constant = inset
 		}
 	}
 
